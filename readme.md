@@ -27,9 +27,11 @@ There are a few ways to speed this code up dramatically that I built in
 
 - If the sum of the spheres is not divisible by *N* we immediately know it's not possible to split this evenly
 - Always assign the largest sphere to the first group. This breaks the symmetry around group numbering
-- If the nth and n-1th sphere volume is larger than the volume of all the spheres divided by the number of piles, they have to be in a separate group. This lets us place some spheres in separate groups and speeds things up considerably.
+- If the nth and n-1th sphere volume is larger than the volume of all the spheres divided by the number of piles, they have to be in a separate group. This lets us place some spheres in separate groups and speeds things up considerably. For example, for N=9, S=51, we can place the 5 largest spheres in the first 5 piles, because the addition of two of these would go over the maximum weight of a pile.
 
-This code runs on my laptop pretty well up until N=8, then it really starts to choke after which I got a much larger AWS instance.
+I feel like there has to be another, more subtle constraint that I am missing here, but all the other ones I came up with ended up being one of these three in disguise.
+
+This code runs on my laptop pretty well up until N=8, then it really starts to choke, so I got a much larger AWS instance.
 
 ## Results
 Running this (on a very large AWS instance), I find
@@ -49,5 +51,8 @@ Running this (on a very large AWS instance), I find
 | 11              | 54, 65, 66 or >70         |
 | 12              | >59                       |
 
+11 and 12 only have bounds as they are still running at the time of writing. 
+
 We can plot this, and see that it kinda looks linear-ish which gives us a guess that 11 piles will need around 65 spheres, and 12 piles will need around 71 spheres.
 ![formulation](images/plot.png)
+Coincidentally, both 65 and 66 have not been ruled out as candidates for N=11 (and I haven't looked >70)
