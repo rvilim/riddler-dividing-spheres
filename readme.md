@@ -29,8 +29,10 @@ There are a few ways to speed this code up dramatically that I built in
 - Always assign the largest sphere to the first group. This breaks the symmetry around group numbering
 - If the nth and n-1th sphere volume is larger than the volume of all the spheres divided by the number of piles, they have to be in a separate group. This lets us place some spheres in separate groups and speeds things up considerably.
 
+This code runs on my laptop pretty well up until N=8, then it really starts to choke after which I got a much larger AWS instance.
+
 ## Results
-Running this, I find
+Running this (on a very large AWS instance), I find
 
 | Number of Piles | Minimum Number of Spheres |
 |-----------------|---------------------------|
@@ -45,6 +47,7 @@ Running this, I find
 | 9               | 53                        |
 | 10              | 59                        |
 | 11              | 54, 65, 66 or >70         |
+| 12              | >59                       |
 
 We can plot this, and see that it kinda looks linear-ish which gives us a guess that 11 piles will need around 65 spheres, and 12 piles will need around 71 spheres.
 ![formulation](images/plot.png)
