@@ -44,7 +44,7 @@ Running this, I find
 | 8               | 47                        |
 | 9               | 53                        |
 | 10              | 59                        |
-| 11              | Not sure! (yet)           |
+| 11              | 54, 65, 66 or >70         |
 
 We can plot this, and see that it kinda looks linear-ish which gives us a guess that 11 piles will need around 65 spheres, and 12 piles will need around 71 spheres.
 ![formulation](images/plot.png)
