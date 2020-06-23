@@ -38,19 +38,6 @@ def solve(n_spheres, n_piles, num_search_workers):
     for sphere in range(n_spheres):
         model.Add(sum(positioned[(sphere, pile)] for pile in range(n_piles)) == 1)
 
-    # n_odd_spheres = {}
-    # for pile in range(n_piles):
-    #     n_odd_spheres[pile] = model.NewIntVar(0, n_spheres, f"n_odd_spheres_in_pile_{pile}")
-
-    #     model.Add(
-    #         n_odd_spheres[pile] == sum(positioned[(sphere, pile)] for sphere in range(n_spheres) if (sphere + 1) % 2 == 1)
-    #     )
-
-    #     if group_weight % 2 == 0:
-    #         model.AddModuloEquality(0, n_odd_spheres[pile], 2)
-    #     else:
-    #         model.AddModuloEquality(1, n_odd_spheres[pile], 2)
-
     # Put the first sphere in the first pile (symmetry breaking)
     model.Add(positioned[(n_spheres - 1, 0)] == True)
 
@@ -69,13 +56,6 @@ def solve(n_spheres, n_piles, num_search_workers):
                 print(f"Putting sphere {n_spheres - n - 1} in pile {n}")
                 model.Add(positioned[(n_spheres - n - 1, n)] == True)
 
-                # for i in range(n_piles):
-                #     if i != n:
-                #         model.Add(positioned[(n_spheres - n - 1, i)] == False)
-
-                # for i in range(n_spheres - n, n_spheres):
-                #     print(f"Excluding sphere {i} from pile {n}")
-                #     model.Add(positioned[(i, n)] == False)
     solver = cp_model.CpSolver()
     solver.parameters.num_search_workers = num_search_workers
 
