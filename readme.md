@@ -123,3 +123,10 @@ Pile 8: [9, 20, 30, 39, 40], Total Volume: 83277.34 cm^3
 We can plot this, and see that it kinda looks linear-ish which gives us a guess that 11 piles will need around 65 spheres, and 12 piles will need around 71 spheres.
 ![formulation](images/plot.png)
 Coincidentally, both 65 and 66 have not been ruled out as candidates for N=11 (and I haven't looked >70) which means that our linear relation might hold for 11 as well.
+
+## Going beyond the minimum
+What about the split-ability of S greater than the minimum? The script also scan a range of S's. If we plot them we see
+
+![range](images/many_balls.png)
+
+Here blue indicaes that the Pile/Spheres combination *is* possible. We can see that there is definitel some periodicity there!
