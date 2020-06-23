@@ -41,9 +41,6 @@ def solve(n_spheres, n_piles, num_search_workers):
     # Put the first sphere in the first pile (symmetry breaking)
     model.Add(positioned[(n_spheres - 1, 0)] == True)
 
-    # for i in range(1, n_piles):
-    # model.Add(positioned[(n_spheres - 1, i)] == False)
-
     print(f"Putting sphere {n_spheres - 1} in pile 0")
     # If the sum of the biggest two cubes is greater than the sum of the cubes divided by the number of piles, then these
     # two cubes cannot be in the same pile
