@@ -49,8 +49,8 @@ Running this code (on a very large AWS instance), I find
 | 6               | 35                        |
 | 7               | 41                        |
 | 8               | 47                        |
-| 9               | 53                        |
-| 10              | 59                        |
+| 9               | 53*                       |
+| 10              | 59*                       |
 | 11              | 54, 65, 66 or >70         |
 | 12              | >59                       |
 
