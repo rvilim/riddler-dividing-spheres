@@ -128,6 +128,20 @@ Pile 8: [16, 25, 29, 37, 44, 62]
 Pile 9: [5, 12, 55, 63]
 Pile 10: [3, 4, 11, 18, 53, 64]
 Pile 11: [2, 7, 22, 51, 65]
+
+Minimum for 12 children is 63 spheres
+Pile 1: [43, 40, 38, 37, 36, 35, 5]
+Pile 2: [1, 27, 30, 34, 47, 53]
+Pile 3: [15, 21, 33, 51, 54]
+Pile 4: [12, 18, 22, 41, 44, 55]
+Pile 5: [8, 28, 52, 56]
+Pile 6: [11, 19, 29, 31, 45, 57]
+Pile 7: [10, 26, 50, 58] 
+Pile 8: [2, 3, 25, 49, 59]
+Pile 9: [16, 20, 48, 60]
+Pile 10: [7, 13, 17, 23, 32, 39, 61]
+Pile 11: [4, 6, 14, 46, 62]
+Pile 12: [9, 24, 42, 63]
 ```
 
 We can plot this, and see that it kinda looks linear-ish which gives us a guess that 11 piles will need around 65 spheres, and 12 piles will need around 71 spheres.
