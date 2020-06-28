@@ -51,8 +51,8 @@ Running this code (on a very large AWS instance), I find
 | 8               | 47                        |
 | 9               | 53*                       |
 | 10              | 59*                       |
-| 11              | 65         |
-| 12              | >59                       |
+| 11              | 65                        |
+| 12              | 63                        |
 
 I foolishly forgot to save the exact groupings for 9 and 10, but the groupings for 1-8, 11 are
 
