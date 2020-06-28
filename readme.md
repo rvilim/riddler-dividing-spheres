@@ -51,13 +51,10 @@ Running this code (on a very large AWS instance), I find
 | 8               | 47                        |
 | 9               | 53*                       |
 | 10              | 59*                       |
-| 11              | 54, 65, 66 or >70         |
+| 11              | 65         |
 | 12              | >59                       |
 
-I foolishly forgot to save the exact groupings for 9 and 10, but the groupings for 1-8 are
-
-11 and 12 only have bounds as they are still running at the time of writing. 
-
+I foolishly forgot to save the exact groupings for 9 and 10, but the groupings for 1-8, 11 are
 
 ```
 Minimum for 1 children is 1 sphere
@@ -118,6 +115,19 @@ Pile 5: [1, 3, 8, 17, 42, 43], Total Volume: 83277.34 cm^3
 Pile 6: [2, 5, 6, 19, 24, 31, 34, 41], Total Volume: 83277.34 cm^3
 Pile 7: [7, 11, 21, 22, 33, 36, 38], Total Volume: 83277.34 cm^3
 Pile 8: [9, 20, 30, 39, 40], Total Volume: 83277.34 cm^3
+
+Minimum for 11 children is 65 spheres
+Pile 1: [49, 45, 41, 38, 36, 31, 21]
+Pile 2: [1, 14, 30, 39, 42, 43, 56]
+Pile 3: [8, 15, 19, 46, 50, 57]
+Pile 4: [10, 26, 28, 33, 35, 47, 58]
+Pile 5: [6 ,32 ,34 ,52 ,59]
+Pile 6: [20, 27, 40, 48, 60]
+Pile 7: [9, 13, 17, 23, 24, 54, 61]
+Pile 8: [16, 25, 29, 37, 44, 62]
+Pile 9: [5, 12, 55, 63]
+Pile 10: [3, 4, 11, 18, 53, 64]
+Pile 11: [2, 7, 22, 51, 65]
 ```
 
 We can plot this, and see that it kinda looks linear-ish which gives us a guess that 11 piles will need around 65 spheres, and 12 piles will need around 71 spheres.
